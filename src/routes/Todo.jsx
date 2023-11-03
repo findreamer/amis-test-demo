@@ -1,9 +1,14 @@
 import React from 'react'
+import {RootStore} from  '../store/todo'
+import {observe} from 'mobx'
 
-const Todo = () => {
+const store = RootStore.create({
+})
+
+const Todo = (props) => {
   return (
-    <div>Todo</div>
+    <div >Todo</div>
   )
 }
 
-export default Todo
+export default observe(Todo)
